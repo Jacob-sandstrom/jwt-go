@@ -1,3 +1,6 @@
+# Changes in this Fork
+Avoids time skew issues by not checking the IssuedAt claim in the Valid() func
+
 # jwt-go
 
 [![Build Status](https://travis-ci.org/dgrijalva/jwt-go.svg?branch=master)](https://travis-ci.org/dgrijalva/jwt-go)

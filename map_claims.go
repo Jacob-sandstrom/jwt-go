@@ -84,10 +84,10 @@ func (m MapClaims) Valid() error {
 		vErr.Errors |= ValidationErrorExpired
 	}
 
-	if m.VerifyIssuedAt(now, false) == false {
-		vErr.Inner = errors.New("Token used before issued")
-		vErr.Errors |= ValidationErrorIssuedAt
-	}
+	// if m.VerifyIssuedAt(now, false) == false {
+	// 	vErr.Inner = errors.New("Token used before issued")
+	// 	vErr.Errors |= ValidationErrorIssuedAt
+	// }
 
 	if m.VerifyNotBefore(now, false) == false {
 		vErr.Inner = errors.New("Token is not valid yet")

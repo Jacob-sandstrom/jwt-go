@@ -41,10 +41,10 @@ func (c StandardClaims) Valid() error {
 		vErr.Errors |= ValidationErrorExpired
 	}
 
-	if c.VerifyIssuedAt(now, false) == false {
-		vErr.Inner = fmt.Errorf("Token used before issued")
-		vErr.Errors |= ValidationErrorIssuedAt
-	}
+	// if c.VerifyIssuedAt(now, false) == false {
+	// 	vErr.Inner = fmt.Errorf("Token used before issued")
+	// 	vErr.Errors |= ValidationErrorIssuedAt
+	// }
 
 	if c.VerifyNotBefore(now, false) == false {
 		vErr.Inner = fmt.Errorf("token is not valid yet")
